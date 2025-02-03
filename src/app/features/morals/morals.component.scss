@@ -1,0 +1,71 @@
+section {
+  .logo {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    &.en {
+      left: 2%;
+      right: unset;
+    }
+  }
+  .container-fluid {
+    padding-right: 2rem;
+    &.en {
+      padding-right: 0rem;
+
+      padding-left: 2rem;
+    }
+    img.bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+    .mainRow {
+      gap: 10rem;
+    }
+
+    .header {
+      max-height: 50px;
+      h2 {
+        font-size: 3.2rem;
+      }
+
+      img {
+        height: 130px;
+        width: auto;
+      }
+    }
+
+    .col-container {
+      padding-top: 8rem;
+    }
+
+    .strategy-info {
+      &:first-child {
+        margin-bottom: 5rem;
+      }
+      .steps {
+        .step {
+          .icon {
+            border-bottom: 2px solid #cddc29;
+
+            img {
+              height: 70px;
+              width: auto;
+            }
+          }
+
+          h2 {
+            font-size: 3.35rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}

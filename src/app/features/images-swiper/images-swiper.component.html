@@ -1,0 +1,28 @@
+<div
+  class="images-swiper d-flex align-items-center"
+  *ngIf="isVisible"
+  @fadeInOut
+>
+  <button
+    class="back-btn btn fw-medium d-flex align-items-center gap-3"
+    (click)="toggleImages()"
+  >
+    {{ "BACK_BTN" | translate }}
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <swiper-container
+    pagination="true"
+    pagination-clickable="true"
+    slides-per-view="2.5"
+    [spaceBetween]="30"
+    centered-slides="true"
+    class="fadeLeft w-100"
+    dir="ltr"
+  >
+    <swiper-slide class="rotate" *ngFor="let image of images">
+      <div class="w-100 h-100 rounded-4 overflow-hidden">
+        <img [src]="image" alt="image" />
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>

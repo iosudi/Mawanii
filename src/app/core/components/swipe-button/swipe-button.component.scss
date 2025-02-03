@@ -1,0 +1,50 @@
+.show-images-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+
+  i {
+    color: var(--text-default);
+    font-size: 2rem;
+  }
+
+  &.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-out;
+  }
+
+  &.en {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+
+    .expand-ball {
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -110px;
+      width: 180px;
+      height: 180px;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+}
+
+.expand-ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -110px;
+  width: 180px;
+  height: 180px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}

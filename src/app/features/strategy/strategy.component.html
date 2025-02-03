@@ -1,0 +1,96 @@
+<section
+  class="h-100 w-100 position-relative"
+  [dir]="currentLanguage == 'ar' ? 'rtl' : 'ltr'"
+>
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+  />
+  <div
+    class="container d-flex flex-column justify-content-between position-relative pt-5"
+  >
+    <h1 class="overflow-hidden position-relative w-fit-content mt-5" #title>
+      <span class="cursor" [class.en]="currentLanguage == 'en'"></span>
+      <span class="text"> {{ "STRATEGY.TITLE" | translate }}</span>
+    </h1>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-2 strategy-col">
+        <div
+          #card
+          class="strategy d-flex align-items-center justify-content-center flex-column gap-3 p-4 rounded-4 h-100 pointer"
+          routerLink="/vision&mission"
+        >
+          <div class="icon">
+            <img src="./assets/images/Strategy/5.svg" alt="icon" />
+          </div>
+          <p class="mb-0 text-center fw-semibold">
+            {{ "STRATEGY.CARD1" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 strategy-col">
+        <div
+          #card
+          class="strategy d-flex align-items-center justify-content-center flex-column gap-3 p-4 rounded-4 h-100 pointer"
+          routerLink="/vision&mission"
+        >
+          <div class="icon">
+            <img src="./assets/images/Strategy/4.svg" alt="icon" />
+          </div>
+          <p class="mb-0 text-center fw-semibold">
+            {{ "STRATEGY.CARD2" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 strategy-col">
+        <div
+          #card
+          class="strategy d-flex align-items-center justify-content-center flex-column gap-3 p-4 rounded-4 h-100 pointer"
+          routerLink="/goals&pillars"
+        >
+          <div class="icon">
+            <img src="./assets/images/Strategy/3.svg" alt="icon" />
+          </div>
+          <p class="mb-0 text-center fw-semibold">
+            {{ "STRATEGY.CARD3" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 strategy-col">
+        <div
+          #card
+          class="strategy d-flex align-items-center justify-content-center flex-column gap-3 p-4 rounded-4 h-100 pointer"
+          routerLink="/goals&pillars"
+        >
+          <div class="icon">
+            <img src="./assets/images/Strategy/2.svg" alt="icon" />
+          </div>
+          <p class="mb-0 text-center fw-semibold">
+            {{ "STRATEGY.CARD4" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 strategy-col">
+        <div
+          #card
+          class="strategy d-flex align-items-center justify-content-center flex-column gap-3 p-4 rounded-4 h-100 pointer"
+          routerLink="/morals"
+        >
+          <div class="icon">
+            <img src="./assets/images/Strategy/1.svg" alt="icon" />
+          </div>
+          <p class="mb-0 text-center fw-semibold">
+            {{ "STRATEGY.CARD5" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

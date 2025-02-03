@@ -1,0 +1,50 @@
+{
+  "LOCATION_DETAILS": {
+    "ABOUT": "About the port",
+    "WHAT": "What the port receive"
+  },
+
+  "ABOUT": {
+    "TITLE": "About the General Ports Authority",
+    "DESCRIPTION": "The Saudi Ports Authority (Mawani) was established in 1976 (1397 AH) to create a specialized system for building and managing Saudi ports with high efficiency. Within a few years, it transformed Saudi ports into a significant economic driver.",
+    "SIDE_BAR": "Facts and <br /> Information"
+  },
+
+  "LOGISTICS": {
+    "TITLE1": "National Transport",
+    "TITLE2": "and Logistics Strategy",
+    "P1": "In June 2021, under the generous patronage of His Royal Highness Crown Prince Mohammed bin Salman, the Ministry of Transport launched the National Transport and Logistics Strategy (NTLS). The strategy aims to transform Saudi Arabia into a global hub for transport and logistics services.  <br />  Through its ambitious plans for transport and logistics services, as well as strategic partnerships with regional and international organizations",
+    "P2": "and private sector institutions, Saudi Arabia continues to drive research, innovation, and the application of cutting-edge technology in the field of transport and logistics, positioning itself as a global center for the future of transport and logistics services.  <br /> The strategy aims to develop all modes of transport, including air, land, sea, and rail transport. It seeks to integrate the sector into a strong network that connects various sectoral strategies within Vision 2030, enabling other key sectors such as tourism, Hajj and Umrah, industry, and mining, thereby opening new opportunities for economic growth and development."
+  },
+
+  "STRATEGY": {
+    "TITLE": "Saudi Ports Authority Strategy",
+    "CARD1": "Vision",
+    "CARD2": "Mission",
+    "CARD3": "Strategic Objectives",
+    "CARD4": "Strategic Pillars",
+    "CARD5": "Values"
+  },
+
+  "AMBITIONS": {
+    "TITLE": "Highlights of future ambitions and prospects",
+    "P1": "Saudi Ports has limitless future ambitions inspired by a vision that has surpassed horizons with its aspirations."
+  },
+
+  "ADVANTAGES": {
+    "TITLE": " <span>Advantages of</span><br /><span>Saudi Arabia's ports</span>"
+  },
+
+  "PORTS": {
+    "TITLE": "What ports <br />receive",
+    "P1": "Saudi Ports consists of a group of docks that can export and import all types of goods, such as:"
+  },
+
+  "BACK_BTN": "Back",
+
+  "DRAG_BTN": " Drag to <br /> Open <br />Images",
+
+  "START": "Start now",
+
+  "ACHIEVEMENTS": "Authority's achievements"
+}

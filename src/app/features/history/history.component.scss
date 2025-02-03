@@ -1,0 +1,98 @@
+section {
+  position: relative;
+  .logo {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .dates {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.8fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "start item1  item2 item3  item4  item5 item6 item7"
+      "end item14  item13 item12  item11  item10 item9 item8 ";
+
+    .start,
+    .end {
+      height: auto;
+      img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .item1 {
+      grid-area: item1;
+    }
+
+    .item2 {
+      grid-area: item2;
+    }
+
+    .item3 {
+      grid-area: item3;
+    }
+
+    .item4 {
+      grid-area: item4;
+    }
+
+    .item5 {
+      grid-area: item5;
+    }
+
+    .item6 {
+      grid-area: item6;
+    }
+
+    .item7 {
+      grid-area: item7;
+    }
+
+    .item8 {
+      grid-area: item8;
+    }
+
+    .item9 {
+      grid-area: item9;
+    }
+
+    .item10 {
+      grid-area: item10;
+    }
+
+    .item11 {
+      grid-area: item11;
+    }
+
+    .item12 {
+      grid-area: item12;
+    }
+
+    .item13 {
+      grid-area: item13;
+    }
+    .item14 {
+      grid-area: item14;
+    }
+  }
+
+  .line-svg {
+    position: absolute;
+    top: 100px;
+    left: -81px;
+  }
+}

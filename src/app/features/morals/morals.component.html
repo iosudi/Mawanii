@@ -1,0 +1,53 @@
+<section class="w-100 h-100" [dir]="currentLanguage == 'ar' ? 'rtl' : 'ltr'">
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+    [class.en]="currentLanguage == 'en'"
+  />
+  <div class="container-fluid h-100" [class.en]="currentLanguage == 'en'">
+    <div class="row mainRow justify-content-end h-100">
+      <div class="col-lg-5 col-container">
+        <div #strategyInfo class="strategy-info">
+          <div class="header d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">
+              {{ strategies_content.title[currentLanguage] }}
+            </h2>
+
+            <img [src]="strategies_content.icon" alt="icon" />
+          </div>
+
+          <div class="steps row gy-5 mt-5">
+            <div
+              class="col-lg-4"
+              *ngFor="let step of strategies_content.steps"
+              #stepRef
+            >
+              <div class="step">
+                <div class="icon pb-3">
+                  <img [src]="step.icon" alt="icon" />
+                </div>
+
+                <h2 class="my-2 fw-bold inter">{{ step.id }}</h2>
+
+                <p class="fw-medium mb-0 mt-2">
+                  {{ step.content[currentLanguage] }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 px-0">
+        <img
+          class="bg"
+          src="./assets/images/morals/hero-image.svg"
+          alt="image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <app-swipe-button navigateTo="/strategy"></app-swipe-button>
+</section>

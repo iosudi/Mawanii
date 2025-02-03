@@ -1,0 +1,67 @@
+<div
+  class="location-detail-container mx-auto d-flex flex-column justify-content-center h-100"
+  [class.align-left]="direction === 'ltr'"
+  [class.en]="currentLanguage === 'en'"
+>
+  <button
+    class="back-btn btn fw-medium d-flex align-items-center gap-3"
+    routerLink="/home"
+  >
+    {{ "BACK_BTN" | translate }}
+    <i class="fas fa-angle-left"></i>
+  </button>
+
+  <div class="w-fit-content" [dir]="currentLanguage === 'en' ? 'ltr' : 'rtl'">
+    <h2 class="mb-5 pb-5 fw-bold" [class.en]="currentLanguage === 'en'">
+      {{ selectedLocation.name[currentLanguage] }}
+    </h2>
+
+    <div class="about-port mb-5">
+      <h4 class="mb-3">{{ "LOCATION_DETAILS.ABOUT" | translate }}</h4>
+      <p class="mb-0 typing-effect">
+        {{ selectedLocation.description[currentLanguage] }}
+      </p>
+    </div>
+
+    <div class="port-receives">
+      <h4 class="mb-3">{{ "LOCATION_DETAILS.WHAT" | translate }}</h4>
+      <div class="row g-3">
+        <div class="col-lg-4" *ngFor="let item of selectedLocation.icons">
+          <div>
+            <img [src]="item.icon" alt="image" />
+            <p class="mb-0 border-top mt-3 pt-1">
+              {{ item.title[currentLanguage] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="port-image" [class.align-right]="direction === 'ltr'">
+    <img [src]="selectedLocation.image[currentLanguage]" alt="port image" />
+  </div>
+</div>
+
+<div
+  class="show-images-button px-3 pointer"
+  [class.fade-out]="isVisible"
+  #showImagesButton
+  *ngIf="selectedLocation.images"
+>
+  <svg
+    class="expand-ball"
+    #mySvg
+    viewBox="0 0 100 100"
+    [ngClass]="{ expanded: isVisible }"
+  >
+    <circle cx="50" cy="50" r="40" fill="white" />
+  </svg>
+
+  <span
+    class="position-relative d-flex align-items-center text-center fw-medium"
+  >
+    <i class="fa-solid fa-arrow-right ms-5"></i>
+    <span [innerHTML]="'DRAG_BTN' | translate"></span>
+  </span>
+</div>

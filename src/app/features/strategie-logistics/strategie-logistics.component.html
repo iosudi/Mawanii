@@ -1,0 +1,41 @@
+<section class="h-100" [dir]="currentLanguage == 'ar' ? 'rtl' : 'ltr'">
+  <div class="container h-100 pt-5">
+    <img
+      routerLink="/get-started"
+      src="./assets/images/logo.svg"
+      alt="logo"
+      class="logo"
+    />
+    <h1 class="fw-semibold mb-4 pe-5" #title>
+      <span #line class="overflow-hidden position-relative">
+        <span class="cursor" [class.en]="currentLanguage == 'en'"></span>
+        <span class="text">{{ "LOGISTICS.TITLE1" | translate }}</span>
+      </span>
+      <br />
+      <span #line class="overflow-hidden position-relative">
+        <span class="cursor" [class.en]="currentLanguage == 'en'"></span>
+        <span class="text">{{ "LOGISTICS.TITLE2" | translate }}</span>
+      </span>
+    </h1>
+
+    <div class="description overflow-hidden px-5 py-3">
+      <div class="w-75 d-flex gap-3 align-items-start">
+        <p #p1 class="mb-0" [innerHTML]="'LOGISTICS.P1' | translate"></p>
+
+        <p #p2 class="mb-0" [innerHTML]="'LOGISTICS.P2' | translate"></p>
+      </div>
+    </div>
+
+    <div class="steps row w-75 mt-5">
+      <div class="col-lg-3" *ngFor="let step of steps" #stepRef>
+        <div class="step">
+          <div class="icon pb-3">
+            <img [src]="step.icon" alt="icon" />
+          </div>
+          <h2 class="my-2 fw-bold inter">{{ step.id }}</h2>
+          <p class="fw-medium mb-0">{{ step.content[currentLanguage] }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

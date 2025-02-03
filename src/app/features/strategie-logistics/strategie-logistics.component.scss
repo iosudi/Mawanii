@@ -1,0 +1,61 @@
+.container {
+  .logo {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+  h1 {
+    letter-spacing: 1px;
+    line-height: 55px;
+    font-size: 2.8125rem;
+    span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .cursor {
+      width: 35px;
+      height: 58px;
+      display: inline-block;
+      vertical-align: bottom;
+      background-color: #ffffff;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &.en {
+        right: 0;
+        left: unset;
+      }
+    }
+  }
+
+  .description {
+    background-color: #0f4859;
+    p {
+      font-size: 1rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  .steps {
+    .step {
+      .icon {
+        border-bottom: 2px solid #f58220;
+
+        img {
+          height: 70px;
+          width: auto;
+        }
+      }
+
+      h2 {
+        font-size: 3.35rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}

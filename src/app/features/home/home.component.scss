@@ -1,0 +1,103 @@
+:host {
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.logo {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  width: auto;
+  height: 110px;
+}
+.map-container {
+  position: relative;
+  overflow: hidden;
+  height: 800px;
+  width: 60%;
+
+  .map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+
+    .map-image {
+      min-width: 1152px;
+      height: auto;
+      pointer-events: none; /* Prevent interactions */
+      user-select: none; /* Disable text/image selection */
+    }
+
+    /* Location Points */
+    .location-point {
+      position: absolute;
+
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      .point {
+        width: 20px;
+        height: 20px;
+        background: #cddc29;
+        border-radius: 50%;
+        transition: 0.2s;
+        animation: pulse 1000ms infinite ease-in;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      p {
+        max-width: 20ch;
+        line-height: 14px;
+      }
+    }
+  }
+
+  .zoom-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .zoom-button {
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      color: #023d52;
+      font-size: 2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.reset-zoom {
+        background-color: #ffffff24;
+        color: #fff;
+      }
+      &:hover {
+        background: var(--background-default-lighten);
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(205, 220, 41, 0.445);
+  }
+  50% {
+    box-shadow: 0 0 0px 8px rgba(205, 220, 41, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(205, 220, 41, 0);
+  }
+}

@@ -1,0 +1,108 @@
+<section
+  class="w-100 h-100 d-flex"
+  [dir]="currentLanguage == 'en' ? 'ltr' : 'rtl'"
+  #container
+>
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+  />
+  <div class="side right-side">
+    <div class="header d-flex align-items-center justify-content-center mb-4">
+      <img src="./assets/images/ambitions/word2030.svg" alt="image" />
+    </div>
+
+    <div #row class="row border-bottom pb-4">
+      <div class="col-lg-4" *ngFor="let goal of goals.firstRow" #goal>
+        <div class="goal">
+          <h3 class="pe-4" [class.en]="currentLanguage == 'en'">
+            {{ goal.value }}
+            <span *ngIf="goal.span" class="fw-bold">{{
+              goal.span[currentLanguage]
+            }}</span>
+          </h3>
+
+          <div class="content d-flex align-items-start gap-2">
+            <img class="icon" [src]="goal.icon" alt="image" />
+            <p class="mb-0">
+              {{ goal.content[currentLanguage] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div #row class="row border-bottom pb-4">
+      <div class="col-lg-4" *ngFor="let goal of goals.secondRow" #goal>
+        <div class="goal">
+          <h3 class="pe-4" [class.en]="currentLanguage == 'en'">
+            {{ goal.value }}
+            <span *ngIf="goal.span" class="fw-bold">{{ goal.span }}</span>
+          </h3>
+
+          <div class="content d-flex align-items-start gap-2">
+            <img class="icon" [src]="goal.icon" alt="image" />
+            <p class="mb-0">
+              {{ goal.content[currentLanguage] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div #row class="row">
+      <div class="col-lg-4" *ngFor="let goal of goals.thirdRow" #goal>
+        <div class="goal">
+          <h3 class="pe-4" [class.en]="currentLanguage == 'en'">
+            {{ goal.value }}
+            <span *ngIf="goal.span" class="fw-bold">{{ goal.span }}</span>
+          </h3>
+
+          <div class="content d-flex align-items-start gap-2">
+            <img class="icon" [src]="goal.icon" alt="image" />
+            <p class="mb-0">
+              {{ goal.content[currentLanguage] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="side left-side">
+    <h3 class="heading pb-4" [class.en]="currentLanguage == 'en'">
+      {{ "AMBITIONS.TITLE" | translate }}
+    </h3>
+
+    <div class="title d-flex align-items-center gap-4 my-4">
+      <div class="image">
+        <img src="./assets/images/ambitions/yellow-ship.svg" alt="icon" />
+      </div>
+      <div class="image">
+        <img src="./assets/images/ambitions/yellow-arrow-goal.svg" alt="icon" />
+      </div>
+
+      <p class="mb-0 fw-medium">
+        {{ "AMBITIONS.P1" | translate }}
+      </p>
+
+      <p></p>
+    </div>
+
+    <div #row class="row gx-5 gy-2">
+      <div class="col-lg-4" *ngFor="let plan of future_plans" #goal>
+        <div class="plan">
+          <img [src]="plan.icon" alt="icon" />
+
+          <p
+            class="mt-4 pt-3 mb-0"
+            [innerHTML]="plan.content[currentLanguage]"
+            [class.en]="currentLanguage == 'en'"
+          ></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+.achievement {
+  min-width: 100%;
+  min-height: 250px;
+
+  img {
+    position: relative;
+    left: 70px;
+    width: 35px;
+    height: auto;
+  }
+
+  .date {
+    position: relative;
+    span {
+      display: inline-block;
+    }
+
+    span.content {
+      color: var(--text-primary);
+    }
+
+    .borderTop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      border-radius: 5px;
+      height: 3px;
+      background-color: #ffffff;
+    }
+
+    .borderBottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      border-radius: 5px;
+      height: 3px;
+      background-color: #ffffff;
+    }
+
+    i {
+      position: absolute;
+      right: 0px;
+      font-size: 1rem;
+      bottom: -9px;
+
+      &.fa-angle-right {
+        right: -1.5px;
+        font-size: 1.5rem;
+        bottom: -13px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -4.5px;
+      left: 0;
+      width: 100px;
+      border-radius: 5px;
+      height: 7px;
+      background-color: var(--background-primary);
+      transform: scaleX(var(--scale, 0)); /* Initially scale it to 0 */
+      transform-origin: left;
+      z-index: 5;
+    }
+  }
+
+  p {
+    width: fit-content;
+
+    &:last-child {
+      max-width: 16ch;
+    }
+  }
+}

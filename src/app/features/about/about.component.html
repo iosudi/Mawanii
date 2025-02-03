@@ -1,0 +1,75 @@
+<section class="w-100 h-100" [dir]="currentLanguage == 'ar' ? 'rtl' : 'ltr'">
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+    [class.en]="currentLanguage == 'en'"
+  />
+  <div class="container-fluid">
+    <div class="header mb-5">
+      <h2 class="pb-4" #title [class.en]="currentLanguage == 'en'">
+        {{ "ABOUT.TITLE" | translate }}
+      </h2>
+
+      <p class="mt-3 mb-0" #p1>
+        {{ "ABOUT.DESCRIPTION" | translate }}
+      </p>
+    </div>
+
+    <div
+      class="d-flex justify-content-between align-items-start content-container"
+    >
+      <div class="side-title-container" #p2>
+        <div class="side-title pb-3" [class.en]="currentLanguage == 'en'">
+          <span [innerHTML]="getSafeHtml('ABOUT.SIDE_BAR')"> </span>
+          <i class="fa-solid fa-circle"></i>
+        </div>
+
+        <button class="uiverse mt-4" (click)="open()">
+          <div class="wrapper d-flex">
+            <span
+              class="d-flex flex-column justify-content-center align-items-center gap-3 px-4 py-3"
+            >
+              <img src="./assets/images/play-icon.svg" alt="icon" />
+
+              {{ "ACHIEVEMENTS" | translate }}
+            </span>
+            <div class="circle circle-12"></div>
+            <div class="circle circle-11"></div>
+            <div class="circle circle-10"></div>
+            <div class="circle circle-9"></div>
+            <div class="circle circle-8"></div>
+            <div class="circle circle-7"></div>
+            <div class="circle circle-6"></div>
+            <div class="circle circle-5"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-1"></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="row m-0 g-5">
+        <div class="col-lg-4" *ngFor="let fact of facts" #stepRef>
+          <div class="fact">
+            <div
+              class="icon-container border-bottom d-flex align-items-center justify-content-between pb-1"
+            >
+              <p class="fw-bold mb-0 inter">
+                {{ fact.value }}
+              </p>
+
+              <img [src]="fact.icon" alt="icon" />
+            </div>
+
+            <p class="mb-0 mt-3 content">
+              {{ fact.content[currentLanguage] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

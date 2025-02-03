@@ -1,0 +1,91 @@
+:host {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: black;
+}
+
+.images-swiper {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+
+  button {
+    position: absolute;
+    top: 8%;
+    left: 9%;
+    font-size: 1.5rem;
+    color: #023d52;
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  swiper-container {
+    height: 500px;
+    &::part(container) {
+      overflow: unset;
+    }
+    &::part(pagination) {
+      margin-top: 23px;
+      position: unset;
+    }
+    &::part(bullet-active) {
+      width: 71px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: #023d52;
+      transition: 0.4s;
+    }
+    &::part(bullet) {
+      background-color: #9e9e9e;
+      width: 20px;
+      height: 20px;
+      transition: 0.4s;
+    }
+  }
+
+  swiper-slide {
+    transform: scale(0.8);
+    transition: 0.3s;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.fadeLeft {
+  animation: fadeLeftAnimation 400ms ease-out forwards;
+}
+
+.rotate {
+  animation: rotateAnimation 400ms ease-out;
+}
+
+@keyframes fadeLeftAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0def);
+  }
+}

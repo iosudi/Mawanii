@@ -1,0 +1,29 @@
+<div
+  class="show-images-button px-3 pointer"
+  [class.fade-out]="isVisible"
+  #showImagesButton
+  [class.en]="currentLanguage == 'en'"
+  (click)="navigate()"
+>
+  <svg
+    class="expand-ball"
+    #mySvg
+    viewBox="0 0 100 100"
+    [ngClass]="{ expanded: isVisible }"
+  >
+    <circle cx="50" cy="50" r="40" fill="white" />
+  </svg>
+
+  <span
+    class="position-relative d-flex align-items-center text-center fw-medium"
+  >
+    <i
+      class="fa-solid fa-arrow-right ms-5"
+      [ngClass]="{
+        'fa-arrow-right ms-5': currentLanguage == 'ar',
+        'fa-arrow-left me-5': currentLanguage == 'en'
+      }"
+    ></i>
+    <span>{{ "BACK_BTN" | translate }}</span>
+  </span>
+</div>

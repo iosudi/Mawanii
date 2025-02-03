@@ -1,0 +1,59 @@
+<section
+  class="history d-flex align-items-center justify-content-center h-100 w-100"
+>
+  <img src="./assets/images/history-bg.svg" alt="background" class="bg-image" />
+
+  <div class="logo">
+    <img
+      routerLink="/get-started"
+      src="./assets/images/logo.svg"
+      alt="logo"
+      class="logo"
+    />
+  </div>
+
+  <div class="dates position-relative w-75">
+    <!-- Top Row -->
+    <div
+      class="start d-flex align-items-center justify-content-center pb-5"
+      id="startImage"
+    >
+      <img src="./assets/images/flag-hand.svg" alt="icon" />
+    </div>
+
+    <ng-container *ngFor="let history of histories; let i = index">
+      <app-achievement-date
+        [class]="'item' + (i + 1)"
+        *ngIf="isVisible(i)"
+        [history]="history"
+        [currentLanguage]="currentLanguage"
+        [showIcon]="
+          i === 0 ? 'dot' : i === achievementDates.length - 1 ? 'angle' : null
+        "
+      ></app-achievement-date>
+    </ng-container>
+
+    <div
+      class="end d-flex align-items-center justify-content-center pb-5"
+      id="endImage"
+    >
+      <img src="./assets/images/group-flag.svg" alt="icon" />
+    </div>
+
+    <svg
+      width="113"
+      class="line-svg"
+      height="253"
+      viewBox="0 0 110 251"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        #drawPath
+        d="M130 1H70C31.8924 1 1 31.8923 1 70V180C1 218.108 31.8924 249 70 249H130"
+        stroke="#fff"
+        stroke-width="1"
+      />
+    </svg>
+  </div>
+</section>

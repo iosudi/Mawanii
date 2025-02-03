@@ -1,0 +1,150 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.location-detail-container {
+  height: 75vh;
+  width: 70%;
+
+  &.en {
+    width: 80%;
+  }
+  button {
+    position: absolute;
+    top: 8%;
+    left: 9%;
+    font-size: 1.5rem;
+    color: #fff;
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    position: relative;
+    max-width: 480px;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      background-color: #d9d9d933;
+      width: 100%;
+      height: 8px;
+      border-radius: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: " ";
+      bottom: -4px;
+      right: 0;
+      background-color: var(--background-primary);
+      max-width: 220px;
+      width: 100%;
+      height: 18px;
+      border-radius: 20px;
+    }
+
+    &.en {
+      text-align: left;
+      &::before {
+        left: 0;
+        right: unset;
+      }
+
+      &::after {
+        left: 0;
+        right: unset;
+      }
+    }
+  }
+
+  .about-port {
+    p {
+      max-width: 55ch;
+      font-size: 1.2rem;
+      color: var(--text-lighten);
+    }
+  }
+
+  .port-receives {
+    max-width: 550px;
+    img {
+      height: 45px;
+      width: auto;
+    }
+  }
+
+  .port-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.show-images-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+
+  span {
+    pointer-events: none;
+  }
+  i {
+    color: var(--text-default);
+    font-size: 2rem;
+  }
+
+  &.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-out;
+  }
+}
+
+.expand-ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -110px;
+  width: 180px;
+  height: 180px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: grab;
+
+  &.expanded {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    right: 0;
+    top: -50%;
+  }
+}
+
+.align-left {
+  align-items: end !important;
+  width: 80% !important;
+}
+
+.align-right {
+  top: 0;
+  right: 0;
+  bottom: unset !important;
+  left: unset !important;
+  width: auto !important;
+  height: 100% !important;
+}

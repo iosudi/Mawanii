@@ -1,0 +1,79 @@
+<section class="w-100 h-100" [dir]="currentLanguage == 'ar' ? 'rtl' : 'ltr'">
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+    [class.en]="currentLanguage == 'en'"
+  />
+  <div class="container-fluid h-100" [class.en]="currentLanguage == 'en'">
+    <div class="row justify-content-between h-100">
+      <div class="col-lg-6 col-container">
+        <div class="strategy-info">
+          <div class="header">
+            <h2
+              class="mb-0 pb-4 mb-4"
+              [innerHTML]="'PORTS.TITLE' | translate"
+              #title
+              [class.en]="currentLanguage == 'en'"
+            ></h2>
+
+            <p class="mb-0" #p>
+              {{ "PORTS.P1" | translate }}
+            </p>
+          </div>
+
+          <div class="steps row g-4 mt-5">
+            <div
+              class="col-lg-4"
+              *ngFor="let step of strategies_content.slice(0, 6)"
+              #strategyInfo
+            >
+              <div class="step">
+                <div
+                  class="icon d-flex justify-content-end pb-3"
+                  [ngClass]="{
+                    'justify-content-end ': currentLanguage == 'ar',
+                    'justify-content-start ': currentLanguage == 'en'
+                  }"
+                >
+                  <img [src]="step.icon" alt="icon" />
+                </div>
+                <h2 class="my-2 fw-bold inter text-start">{{ step.id }}</h2>
+                <p class="fw-medium mb-0 mt-2 text-start">
+                  {{ step.content[currentLanguage] }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 image">
+        <div class="steps px-5 row mt-5">
+          <div
+            class="col-lg-4"
+            #strategyInfo
+            *ngFor="
+              let step of strategies_content.slice(6, strategies_content.length)
+            "
+          >
+            <div class="step">
+              <div class="icon pb-3">
+                <img [src]="step.icon" alt="icon" />
+              </div>
+              <h2 class="my-2 fw-bold inter">{{ step.id }}</h2>
+              <p class="fw-medium mb-0 mt-2">
+                {{ step.content[currentLanguage] }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          class="bg"
+          src="./assets/images/ports_receive/hero-image.svg"
+          alt="image"
+        />
+      </div>
+    </div>
+  </div>
+</section>

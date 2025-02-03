@@ -1,0 +1,55 @@
+<div class="map-container mt-5 mx-auto">
+  <!-- Map Wrapper with zoomIn animation on leave -->
+
+  <div
+    class="map-wrapper d-flex justify-content-center"
+    *ngIf="!loading; else mapLoading"
+    #mapContainer
+  >
+    <img
+      [src]="
+        currentLanguage == 'ar'
+          ? './assets/images/map.svg'
+          : './assets/images/map-EN.svg'
+      "
+      alt="Map"
+      class="map-image"
+      draggable="false"
+    />
+
+    <div
+      *ngFor="let location of locations; let i = index"
+      [style.left.%]="location.x[currentLanguage]"
+      [style.top.%]="location.y[currentLanguage]"
+      class="location-point d-flex align-items-center gap-2"
+      [ngClass]="{ 'flex-row-reverse': i < 7 }"
+      (click)="showInfo(location.id)"
+    >
+      <p class="mb-0">
+        {{ location.info[currentLanguage] }}
+      </p>
+      <div class="point"></div>
+    </div>
+  </div>
+
+  <ng-template #mapLoading>
+    <div class="map-wrapper d-flex justify-content-center">
+      <img src="./assets/images/map-animation.gif" alt="loading map" />
+    </div>
+  </ng-template>
+
+  <div class="zoom-controls">
+    <button class="zoom-button reset-zoom" (click)="resetZoom()">
+      <i class="fa-solid fa-location-crosshairs"></i>
+    </button>
+    <button class="zoom-button" (click)="zoomIn()">+</button>
+    <button class="zoom-button" (click)="zoomOut()">-</button>
+  </div>
+</div>
+
+<img
+  routerLink="/get-started"
+  src="./assets/images/logo-words.svg"
+  alt="logo"
+  class="logo"
+/>

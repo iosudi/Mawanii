@@ -1,0 +1,91 @@
+<section class="w-100 h-100" [dir]="currentLanguage == 'en' ? 'ltr' : 'rtl'">
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+  />
+  <div class="container-fluid">
+    <div class="header">
+      <h2 class="fw-semibold" [innerHTML]="'ADVANTAGES.TITLE' | translate"></h2>
+    </div>
+
+    <div class="d-flex align-items-start content-container">
+      <div class="right">
+        <div class="row mx-0 justify-content-between">
+          <div class="col-lg-2" *ngFor="let item of advantages.slice(0, 5)">
+            <div class="advantage" #advantage>
+              <div
+                class="d-flex align-items-end justify-content-between title pb-3"
+              >
+                <span class="inter">
+                  {{ item.id }}
+                </span>
+                <img [src]="item.icon" alt="icon" />
+              </div>
+              <p class="mb-0 mt-2">
+                {{ item.content[currentLanguage] }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mx-0 justify-content-between mt-3 pt-5">
+          <div class="col-lg-2" *ngFor="let item of advantages.slice(5, 10)">
+            <div class="advantage" #advantage>
+              <div
+                class="d-flex align-items-end justify-content-between title pb-3"
+              >
+                <span class="inter">
+                  {{ item.id }}
+                </span>
+                <img [src]="item.icon" alt="icon" />
+              </div>
+              <p class="mb-0 mt-2">
+                {{ item.content[currentLanguage] }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="left">
+        <div class="row mx-0 justify-content-between">
+          <div class="col-lg-2" *ngFor="let item of advantages.slice(10, 14)">
+            <div class="advantage" #advantage>
+              <div
+                class="d-flex align-items-end justify-content-between title pb-3"
+              >
+                <span class="inter">
+                  {{ item.id }}
+                </span>
+                <img [src]="item.icon" alt="icon" />
+              </div>
+              <p class="mb-0 mt-2">
+                {{ item.content[currentLanguage] }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mx-0 justify-content-between mt-3 pt-5">
+          <div class="col-lg-2" *ngFor="let item of advantages.slice(14, 18)">
+            <div class="advantage" #advantage>
+              <div
+                class="d-flex align-items-end justify-content-between title pb-3"
+              >
+                <span class="inter">
+                  {{ item.id }}
+                </span>
+                <img [src]="item.icon" alt="icon" />
+              </div>
+              <p class="mb-0 mt-2">
+                {{ item.content[currentLanguage] }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

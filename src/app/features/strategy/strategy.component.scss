@@ -1,0 +1,70 @@
+section {
+  background-image: url("../../../assets/images/startegy-bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: #00afa9;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 175, 169, 0.15); /* Adjust opacity */
+  }
+
+  .logo {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
+
+  .container {
+    height: 80vh;
+    span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .cursor {
+      width: 35px;
+      height: 58px;
+      display: inline-block;
+      vertical-align: bottom;
+      background-color: #ffffff;
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      &.en {
+        right: 0;
+        left: unset;
+      }
+    }
+    .strategy-col {
+      .strategy {
+        .icon {
+          img {
+            width: auto;
+            height: 72px;
+          }
+        }
+      }
+      &:nth-child(1) .strategy {
+        background-color: #09455b;
+      }
+      &:nth-child(2) .strategy {
+        background-color: #336476;
+      }
+      &:nth-child(3) .strategy {
+        background-color: #18647f;
+      }
+      &:nth-child(4) .strategy {
+        background-color: #46869d;
+      }
+      &:nth-child(5) .strategy {
+        background-color: #06b2e1;
+      }
+    }
+  }
+}

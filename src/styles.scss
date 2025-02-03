@@ -1,0 +1,52 @@
+/* Importing Bootstrap SCSS file. */
+@use "bootstrap/scss/bootstrap";
+
+@use "./styles/base/fonts";
+@use "./styles/base/buttons";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --background-default: #023d52;
+  --background-default-lighten: #09465b;
+  --background-primary: #cddc29;
+
+  --text-default: #023d52;
+  --text-primary: #cddc29;
+  --text-body: #fff;
+  --text-lighten: #ffffff80;
+}
+
+* {
+  list-style: none;
+  user-select: none;
+}
+
+body {
+  background-color: var(--background-default);
+  color: var(--text-body);
+  font-family: "theMixedArabRegular", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  user-select: none;
+}
+
+.inter {
+  font-family: "Inter", serif !important;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+img.logo {
+  cursor: pointer;
+}

@@ -1,0 +1,154 @@
+section {
+  .logo {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+  .side {
+    width: calc(100% / 2);
+    height: 100%;
+    background-color: #013e52;
+
+    &:last-child {
+      background-color: #00afa9;
+    }
+
+    &.left-side {
+      padding: 2rem 8rem;
+      h3 {
+        position: relative;
+        white-space: nowrap;
+        display: inline-block;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 50%;
+          height: 2px;
+          border-radius: 1px;
+          background-color: #cddc29;
+        }
+
+        &.en:before {
+          left: 0;
+        }
+      }
+
+      .title {
+        .image {
+          img {
+            width: auto;
+            height: 113px;
+          }
+        }
+
+        p {
+          font-size: 1.3rem;
+          max-width: 20ch;
+        }
+      }
+
+      .plan {
+        img {
+          height: 40px;
+          width: auto;
+        }
+
+        p {
+          position: relative;
+          color: #275a67;
+          line-height: 20px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #275a67;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #cddc29;
+          }
+
+          &.en {
+            &::before {
+              right: unset;
+              left: 0;
+            }
+            &::after {
+              right: unset;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.right-side {
+      padding: 2rem 8rem;
+
+      .row.border-bottom {
+        border-bottom: 4px solid #275a67 !important;
+      }
+
+      .goal {
+        h3 {
+          font-size: 3.75rem;
+          color: var(--text-primary);
+          position: relative;
+          span {
+            font-size: 0.8rem;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            border-radius: 5px;
+            background-color: #275a67;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30%;
+            height: 1px;
+            border-radius: 5px;
+            background-color: #cddc29;
+          }
+
+          &.en {
+            &::after {
+              left: unset;
+              right: 0;
+            }
+          }
+        }
+
+        .icon {
+          height: 50px;
+          width: auto;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

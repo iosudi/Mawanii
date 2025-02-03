@@ -1,0 +1,43 @@
+:host {
+  position: relative;
+  z-index: 99;
+}
+
+nav {
+  position: fixed;
+  bottom: 4%;
+
+  left: 0;
+
+  ul {
+    height: 80px;
+    position: relative;
+    display: flex;
+    background-color: var(--background-default-lighten);
+    max-width: 90%;
+    border-radius: 5rem;
+  }
+
+  /* Background element */
+  .background {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--background-primary);
+    transition: all 0.3s ease;
+    border-radius: 3rem;
+  }
+
+  /* Style for the active link */
+  li {
+    transition: all 0.5s ease;
+    position: relative;
+    padding: 1rem 3rem;
+    height: 100%;
+    font-size: 1.2rem;
+  }
+
+  /* Active link */
+  .active-link {
+    color: var(--text-default);
+  }
+}

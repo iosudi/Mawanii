@@ -1,0 +1,21 @@
+<div #achievement class="achievement overflow-hidden" dir="ltr">
+  <img #icon class="icon" src="./assets/images/flag.svg" alt="flag icon" />
+  <h2 class="h1 date">
+    <span class="borderTop" #topBorder></span>
+    <span class="content inter fw-bold" #date>{{ history.date }}</span>
+    <span class="borderBottom" #bottomBorder></span>
+    <i
+      #i
+      *ngIf="showIcon"
+      class="fa-solid"
+      [ngClass]="{
+        'fa-angle-right': showIcon === 'angle',
+        'fa-circle': showIcon === 'dot'
+      }"
+    ></i>
+  </h2>
+  <p #title class="title fw-medium mb-0">
+    {{ history.title[currentLanguage] }}
+  </p>
+  <p #desc class="fw-medium">{{ history.content[currentLanguage] }}</p>
+</div>

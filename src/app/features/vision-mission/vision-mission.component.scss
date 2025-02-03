@@ -1,0 +1,41 @@
+section {
+  background-color: #06b2e1;
+  .logo {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    &.en {
+      left: 0%;
+      right: 3%;
+    }
+  }
+  .container-fluid {
+    padding: 3rem 10rem 0 0rem;
+
+    &.en {
+      padding: 3rem 0rem 0 10rem;
+    }
+    .strategy {
+      p {
+        color: #275a67;
+        font-size: 1.4844rem;
+        max-width: 30ch;
+      }
+
+      img {
+        height: 145px;
+        width: auto;
+      }
+
+      &:first-child {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

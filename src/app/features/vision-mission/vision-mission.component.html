@@ -1,0 +1,41 @@
+<section
+  class="h-100 w-100 pt-5 px-5"
+  [dir]="currentLanguage == 'ar' ? 'rtl' : 'ltr'"
+>
+  <img
+    routerLink="/get-started"
+    src="./assets/images/logo.svg"
+    alt="logo"
+    class="logo"
+    [class.en]="currentLanguage == 'en'"
+  />
+  <div class="container-fluid h-100" [class.en]="currentLanguage == 'en'">
+    <div class="row h-100 align-items-end">
+      <div class="col-lg-6 h-100">
+        <div
+          #strategy
+          class="strategy d-flex gap-5 align-items-start"
+          *ngFor="let strategy of strategies_content"
+        >
+          <div class="content">
+            <h2 class="mb-5">{{ strategy.title[currentLanguage] }}</h2>
+            <p class="mb-0">
+              {{ strategy.description[currentLanguage] }}
+            </p>
+          </div>
+          <img [src]="strategy.icon" alt="icon" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img
+          #heroImage
+          class="hero-image"
+          src="./assets/images/vision&misson/man.svg"
+          alt="image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <app-swipe-button navigateTo="/strategy"></app-swipe-button>
+</section>
