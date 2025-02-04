@@ -23,6 +23,37 @@ export class HomeComponent implements AfterViewInit {
   loading: boolean = true;
   currentLanguage: LanguageKey = 'ar';
 
+  portTypes: any[] = [
+    {
+      title: {
+        ar: 'موانئ تدار من قبل الهيئة العامه للموانئ',
+        en: 'Ports managed by the General Authority of Ports',
+      },
+      color: '#cddc29',
+    },
+    {
+      title: {
+        ar: 'موانئ تدار من قبل الهيئة الملكية للجبيل وينبع',
+        en: 'Ports managed by the Royal Commission for Jubail and Yanbu',
+      },
+      color: '#DCDBD9',
+    },
+    {
+      title: {
+        ar: 'موانئ تدار من قبل شركة نيوم',
+        en: 'Ports managed by NEOM',
+      },
+      color: '#29DC97',
+    },
+    {
+      title: {
+        ar: 'موانئ تدار من قبل القطاع الخاص',
+        en: 'Privately managed ports',
+      },
+      color: '#3FA2B9',
+    },
+  ];
+
   constructor(
     private router: Router,
     protected route: ActivatedRoute,
@@ -68,6 +99,8 @@ export class HomeComponent implements AfterViewInit {
   }
 
   showInfo(id: number): void {
-    this.router.navigate(['/location-details', id]);
+    if (id > 0) {
+      this.router.navigate(['/location-details', id]);
+    }
   }
 }

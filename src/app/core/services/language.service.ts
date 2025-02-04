@@ -33,7 +33,7 @@ export class LanguageService {
   }
 
   setLanguage(language: LanguageKey): void {
-    this.cookieService.set('language', language, 365); // Save language in cookies for 1 year
+    this.cookieService.set('language', language, 30); // Save language in cookies for 30 days
     this.currentLanguageSubject.next(language); // Emit the new language
     this.translate.use(language);
   }

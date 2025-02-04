@@ -173,7 +173,7 @@ export const portDetails = [
   },
 
   {
-    id: 10,
+    id: 0,
     image: {
       ar: './assets/images/ports/M10.svg',
       en: './assets/images/ports/M10-EN.svg',
@@ -467,7 +467,7 @@ export const portDetails = [
   },
 
   {
-    id: 12,
+    id: 0,
     image: {
       ar: './assets/images/ports/M12.svg',
       en: './assets/images/ports/M12-EN.svg',
@@ -527,7 +527,7 @@ export const portDetails = [
   },
 
   {
-    id: 7,
+    id: 0,
     image: {
       ar: './assets/images/ports/M7.svg',
       en: './assets/images/ports/M7-EN.svg',

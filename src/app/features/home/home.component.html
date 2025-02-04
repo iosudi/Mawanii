@@ -15,6 +15,7 @@
       alt="Map"
       class="map-image"
       draggable="false"
+      [class.en]="currentLanguage == 'en'"
     />
 
     <div
@@ -23,6 +24,10 @@
       [style.top.%]="location.y[currentLanguage]"
       class="location-point d-flex align-items-center gap-2"
       [ngClass]="{ 'flex-row-reverse': i < 7 }"
+      [ngStyle]="{
+        '--background-color': location.color,
+        '--pulse-color': location.color + 71
+      }"
       (click)="showInfo(location.id)"
     >
       <p class="mb-0">
@@ -52,6 +57,20 @@
     </button>
     <button class="zoom-button" (click)="zoomIn()">+</button>
     <button class="zoom-button" (click)="zoomOut()">-</button>
+  </div>
+  <div
+    class="types d-flex flex-column gap-2"
+    [class.en]="currentLanguage == 'en'"
+  >
+    <div
+      class="type d-flex align-items-center gap-2"
+      *ngFor="let type of portTypes"
+    >
+      <i class="fa-solid fa-circle" [ngStyle]="{ color: type.color }"></i>
+      <p class="mb-0">
+        {{ type.title[currentLanguage] }}
+      </p>
+    </div>
   </div>
 </div>
 

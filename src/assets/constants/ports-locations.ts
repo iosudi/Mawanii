@@ -1,6 +1,6 @@
 export const locations = [
   {
-    id: 7,
+    id: 0,
     x: {
       ar: 11.5,
       en: 8.5,
@@ -10,6 +10,8 @@ export const locations = [
       en: 30,
     },
     info: { ar: 'ميناء نيوم', en: 'Neom Port' },
+    color: '#29DC97',
+    boxShadow: '#29DC9771',
   },
   {
     id: 8,
@@ -22,6 +24,8 @@ export const locations = [
       en: 51,
     },
     info: { ar: 'ميناء ينبع التجاري', en: 'Yanbu Commercial Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 9,
@@ -37,9 +41,11 @@ export const locations = [
       ar: 'ميناء الملك فهد الصناعي في ينبع',
       en: 'King Fahd Industrial Port in Yanbu',
     },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
-    id: 10,
+    id: 0,
     x: {
       ar: 23,
       en: 21,
@@ -49,6 +55,8 @@ export const locations = [
       en: 64.5,
     },
     info: { ar: 'ميناء الملك عبدالله', en: 'King Abdullah Port' },
+    color: '#3FA2B9',
+    boxShadow: '#3FA2B971',
   },
   {
     id: 11,
@@ -61,9 +69,11 @@ export const locations = [
       en: 73,
     },
     info: { ar: 'ميناء جدة الإسلامي', en: 'Jeddah Islamic Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
-    id: 12,
+    id: 0,
     x: {
       ar: 29.5,
       en: 27.5,
@@ -76,6 +86,8 @@ export const locations = [
       ar: 'ميناء مدينة جازان للصناعات الأساسية والتحويلية',
       en: 'Jazan City for Primary and Downstream Industries Port',
     },
+    color: '#DCDBD9',
+    boxShadow: '#DCDBD971',
   },
   {
     id: 13,
@@ -88,6 +100,8 @@ export const locations = [
       en: 95,
     },
     info: { ar: 'ميناء جازان', en: 'Jazan Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 1,
@@ -100,6 +114,9 @@ export const locations = [
       en: 28,
     },
     info: { ar: 'ميناء الخفجي', en: 'Khafji Port' },
+
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 2,
@@ -112,6 +129,8 @@ export const locations = [
       en: 31,
     },
     info: { ar: 'ميناء رأس الخير', en: 'Ras Al Khair Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 3,
@@ -127,6 +146,8 @@ export const locations = [
       ar: 'ميناء الملك فهد',
       en: 'King Fahd Port',
     },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 4,
@@ -139,6 +160,8 @@ export const locations = [
       en: 39,
     },
     info: { ar: 'ميناء الجبيل التجاري', en: 'Jubail Commercial Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 5,
@@ -151,6 +174,8 @@ export const locations = [
       en: 43.5,
     },
     info: { ar: 'ميناء رأس تنورة', en: 'Ras Tanura Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
   {
     id: 6,
@@ -163,5 +188,7 @@ export const locations = [
       en: 50,
     },
     info: { ar: 'ميناء الملك عبد العزيز', en: 'King Abdulaziz Port' },
+    color: '#cddc29',
+    boxShadow: '#cddc2971',
   },
 ];
