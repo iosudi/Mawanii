@@ -34,7 +34,15 @@
 
   <ng-template #mapLoading>
     <div class="map-wrapper d-flex justify-content-center">
-      <img src="./assets/images/map-animation.gif" alt="loading map" />
+      <img
+        src="./assets/images/map-animation.gif"
+        [src]="
+          currentLanguage == 'ar'
+            ? './assets/images/map-animation.gif'
+            : './assets/images/map-animation-EN.gif'
+        "
+        alt="loading map"
+      />
     </div>
   </ng-template>
 
