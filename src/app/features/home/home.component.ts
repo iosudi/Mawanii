@@ -27,7 +27,7 @@ export class HomeComponent implements AfterViewInit {
     {
       title: {
         ar: 'موانئ تدار من قبل الهيئة العامه للموانئ',
-        en: 'Ports managed by the General Authority of Ports',
+        en: 'Ports managed by Saudi Ports Authority',
       },
       color: '#cddc29',
     },
@@ -48,7 +48,7 @@ export class HomeComponent implements AfterViewInit {
     {
       title: {
         ar: 'موانئ تدار من قبل القطاع الخاص',
-        en: 'Privately managed ports',
+        en: 'Ports managed by the private sector',
       },
       color: '#3FA2B9',
     },
